@@ -1,3 +1,5 @@
+document.getElementById('buscarBtn').addEventListener('click', buscarClima);
+
 async function buscarClima() {
   const cidade = document.getElementById('cidade').value.trim();
   const resultado = document.getElementById('resultado');
@@ -7,7 +9,7 @@ async function buscarClima() {
     return;
   }
 
-  const apiKey = "f930beba256edc03f64ac8d143619248";
+  const apiKey = "c2414972943f8b5ec6279693bf12a6e4";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${apiKey}&units=metric&lang=pt_br`;
 
   try {
@@ -28,25 +30,26 @@ async function buscarClima() {
     const icon = weather[0].icon;
     const isNoite = icon.includes('n');
 
-    // Fundo e ícone dinâmico
+    // Fundo dinâmico (dia/noite)
     const fundo = isNoite
       ? 'linear-gradient(135deg, #141E30, #243B55)'
       : 'linear-gradient(135deg, #89f7fe, #66a6ff)';
     document.body.style.background = fundo;
 
+    // Ícone dinâmico
     const iconeEmoji = isNoite ? '🌙' : '☀️';
     const classeIcone = isNoite ? 'lua' : 'sol';
 
     resultado.innerHTML = `
-          <p><b>${name}</b>, ${sys.country}</p>
-          <div class="icone ${classeIcone}">${iconeEmoji}</div>
-          <p style="font-size:22px;"><b>${temp}°C</b> - ${descricao}</p>
-          <div class="info">
-            🌡️ Sensação térmica: <b>${sensacao}°C</b><br>
-            💧 Umidade: <b>${umidade}%</b><br>
-            🌬️ Vento: <b>${vento} km/h</b>
-          </div>
-        `;
+      <p><b>${name}</b>, ${sys.country}</p>
+      <div class="icone ${classeIcone}">${iconeEmoji}</div>
+      <p style="font-size:22px;"><b>${temp}°C</b> - ${descricao}</p>
+      <div class="info">
+        🌡️ Sensação térmica: <b>${sensacao}°C</b><br>
+        💧 Umidade: <b>${umidade}%</b><br>
+        🌬️ Vento: <b>${vento} km/h</b>
+      </div>
+    `;
   } catch {
     resultado.innerHTML = "⚠️ Erro ao buscar o clima.";
   }
