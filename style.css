@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-box input {
+  width: 70%;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.search-box button {
+  background: #ffffff33;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-box button:hover {
+  background: #ffffff55;
+}
+
+.weather-box img {
+  width: 100px;
+  margin: 10px 0;
+}
+
+#cityName {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+#temperature {
+  font-size: 2rem;
+  margin: 5px 0;
+}
+
+#description {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+.extra-info {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.extra-info i {
+  margin-right: 5px;
+  color: #ffe680;
+}
