@@ -9,7 +9,7 @@ async function buscarClima() {
     return;
   }
 
-  const apiKey = "c2414972943f8b5ec6279693bf12a6e4";
+const apiKey = "SUA CHAVE API AQUI";
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&appid=${apiKey}&units=metric&lang=pt_br`;
 
   try {
