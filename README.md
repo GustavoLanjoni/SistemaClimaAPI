@@ -30,3 +30,16 @@ Umidade e velocidade do vento
 ✅ Ícones dinâmicos ☀️🌙
 ✅ Fundo muda automaticamente conforme o período do dia
 ✅ Layout estilo aplicativo, leve e elegante
+
+
+
+💡 Objetivo do Projeto
+
+Esse projeto foi criado para ensinar o uso de APIs com JavaScript puro de forma prática e intuitiva — ideal para quem está começando na programação front-end e quer entender como integrar dados externos a uma interface web moderna.
+
+🎥 Criado por
+
+👨‍💻 Gustavo Lanjoni
+📺 Canal no YouTube: DevLanjoni
+
+📍 Projeto desenvolvido para fins educativos e demonstrativos.
